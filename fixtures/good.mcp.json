@@ -1,0 +1,20 @@
+{
+  "name": "docs-mcp",
+  "version": "1.0.0",
+  "description": "Documentation search MCP",
+  "tools": [
+    {
+      "name": "search_docs",
+      "description": "Search project documentation by keyword and return matching sections.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "query": { "type": "string", "description": "Search query" },
+          "limit": { "type": "integer", "minimum": 1, "maximum": 20, "default": 5 }
+        },
+        "required": ["query"],
+        "additionalProperties": false
+      }
+    }
+  ]
+}
